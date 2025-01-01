@@ -28,10 +28,6 @@ body {
     }
 }
 
-a{
-    text-decoration: none;
-}
-
 /*Hero Section*/
 
 #box {
@@ -56,12 +52,6 @@ a{
 
 .white {
     color: white;
-}
-
-#background {
-    background-image: url("heroimage.jpeg");
-    background-size: cover;
-    z-index: -1; 
 }
 
 .btn {
@@ -191,11 +181,11 @@ i{
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    color: white;
 }
   
 .logo {
     font-size: 20px;
+    color: white;
 }
   
 .nav-links {
@@ -203,12 +193,19 @@ i{
     display: flex;
     gap: 15px;
 }
+
+a{
+    text-decoration: none;
+}
   
 .nav-links li a {
-    text-decoration: none;
-    color: white;
+    color: rgb(13, 38, 118);
     font-size: 18px;
+    padding: 5px 15px ;
+    background-color: rgb(255, 255, 255);
+    border-radius: 17px;
 }
+
   
 /* Hamburger Menu Icon */
 .menu-icon {
