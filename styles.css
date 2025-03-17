@@ -1,0 +1,634 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+#background {
+    background-image: url("heroimage.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+#box {
+    height: 89vh;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    text-align: center;
+    padding: 3rem; /* Increased padding to keep size */
+    background: rgba(111, 176, 245, 0.2); /* Light blue transparent effect */
+    width: 80%; /* Make it take up more space */
+    max-width: 900px; /* Prevent it from getting too large */
+    border-radius: 10px; /* Optional: Keeps a smooth look */
+}
+
+
+#heading {
+    font-size: 2.5rem;
+}
+
+#big {
+    font-size: 1.2rem;
+}
+
+.white {
+    color: white;
+}
+
+/* Fix: Ensure Buttons Stay on Screen */
+#nav-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    background: #fff;
+    color: #4e54c8;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+    text-align: center;
+    white-space: nowrap; /* Prevents text breaking */
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #8f94fb;
+    color: #fff;
+}
+
+/* Navigation */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative;
+}
+
+/* Fix Logo Position */
+.logo {
+    font-size: 22px;
+    color: white;
+    margin-left: 20px; /* Moves it slightly away from the left */
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .logo {
+        margin-left: 15px; /* Slightly smaller space on mobile */
+    }
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: rgb(13, 38, 118);
+    font-size: 18px;
+    padding: 5px 15px;
+    background-color: white;
+    border-radius: 17px;
+}
+
+/* Hamburger Menu */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        width: 150px;
+        text-align: center;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .hero-content {
+        width: 90%; /* Adjusts width for smaller screens */
+        padding: 2rem; /* Adjust padding for mobile */
+    }
+}
+
+/* Sections */
+section {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Responsive Sections */
+@media (max-width: 768px) {
+    section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.image img {
+    width: 100%;
+    max-width: 340px;
+    border-radius: 10px;
+}
+
+.content {
+    padding-left: 30px;
+    max-width: 600px;
+    font-style: italic;
+}
+
+.content > p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+    text-align: left;
+}
+
+.highlight {
+    font-size: 22px;
+    font-weight: bold;
+    color: #313131;
+}
+
+/* Responsive About Section */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .content {
+        padding: 0;
+    }
+}
+
+/* Projects & Internships Layout */
+.project-container, .internships {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Desktop: Two Projects per Row */
+.project-card, .internship {
+    background-color: #f4f4f4;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 45%;
+    min-width: 320px;
+    text-align: center;
+}
+
+.project-card:hover, .internship:hover {
+    transform: scale(1.08);
+}
+
+/* Mobile: One Project per Row */
+@media (max-width: 768px) {
+    .project-card, .internship {
+        width: 90%;
+    }
+}
+
+/* Skills Section */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin: 0.7rem;
+    padding: 1rem;
+    width: 100px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+i {
+    font-size: 2rem;
+}
+
+/* Contact Section */
+#contact {
+    padding: 30px 20px;
+    background-color: #e4e4e4;
+    text-align: center;
+}
+
+.contact {
+    width: 200px;
+    padding: 20px;
+    border-radius: 1rem;
+    margin: 10px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.4rem 0;
+}
+
+/* Fully Responsive */
+@media (max-width: 480px) {
+    #heading {
+        font-size: 2rem;
+    }
+
+    #big {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.4rem 0.8rem;
+    }
+
+    .project-card, .internship {
+        padding: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}
+
+/*
+
+1st code 
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+#background {
+    background-image: url("heroimage.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/* Adjust background for smaller screens */
+@media (max-width: 768px) {
+    #background {
+        background-size: contain;
+        background-attachment: scroll;
+    }
+}
+
+/* Hero Content */
+#box {
+    height: 89vh;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(111, 176, 245, 0.1);
+}
+
+#heading {
+    font-size: 2.5rem;
+}
+
+#big {
+    font-size: 1.2rem;
+}
+
+.white {
+    color: white;
+}
+
+.btn {
+    background: #fff;
+    color: #4e54c8;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #8f94fb;
+    color: #fff;
+}
+
+/* Navigation */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.logo {
+    font-size: 22px;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: rgb(13, 38, 118);
+    font-size: 18px;
+    padding: 5px 15px;
+    background-color: white;
+    border-radius: 17px;
+}
+
+/* Hamburger Menu */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        width: 150px;
+        text-align: center;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+}
+
+/* Sections */
+section {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Responsive Sections */
+@media (max-width: 768px) {
+    section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.image img {
+    width: 100%;
+    max-width: 340px;
+    border-radius: 10px;
+}
+
+.content {
+    padding-left: 30px;
+    max-width: 600px;
+    font-style: italic;
+}
+
+.content > p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.content > .highlight {
+    font-size: 20px;
+    color: #313131;
+    font-weight: bold;
+
+}
+
+/* Responsive About Section */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .content {
+        padding: 0;
+    }
+}
+
+/* Project, Certificates, and Internships */
+.project-container, .certificates, .internships {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-card, .certificate, .internship {
+    background-color: #f4f4f4;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    max-width: 90%;
+    text-align: center;
+}
+
+.project-card:hover, .certificate:hover, .internship:hover {
+    transform: scale(1.08);
+}
+
+/* Responsive Project Section */
+@media (max-width: 768px) {
+    .project-card, .certificate, .internship {
+        max-width: 100%;
+    }
+}
+
+/* Skills Section */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin: 0.7rem;
+    padding: 1rem;
+    width: 100px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+i {
+    font-size: 2rem;
+}
+
+/* Contact Section */
+#contact {
+    padding: 30px 20px;
+    background-color: #e4e4e4;
+    text-align: center;
+}
+
+.contact {
+    width: 200px;
+    padding: 20px;
+    border-radius: 1rem;
+    margin: 10px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.4rem 0;
+}
+
+/* Fully Responsive */
+@media (max-width: 480px) {
+    #heading {
+        font-size: 2rem;
+    }
+
+    #big {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.4rem 0.8rem;
+    }
+
+    .project-card, .certificate, .internship {
+        padding: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+} 
+
